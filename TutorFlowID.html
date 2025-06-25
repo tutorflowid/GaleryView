@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Gallery with Cloudinary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gallery-item {
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .gallery-img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 8px 8px 0 0;
+        }
+        .action-btn {
+            transition: all 0.2s ease;
+            letter-spacing: 0.5px;
+        }
+        .action-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-3">My Galery View</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Dibuat Oleh Developer TutorFlow ID</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item bg-white rounded-lg overflow-hidden">
+                <!-- Ganti YOUR_CLOUD_NAME dengan cloud name Cloudinary Anda -->
+                <img src="https://res.cloudinary.com/bglgirl/image/upload/v1750858728/pexels-maxfrancis-2246476_rx1num.jpg" 
+                     alt="Nature 1" class="gallery-img">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Pemandangan Gunung</h3>
+                    <p class="text-gray-600 mb-4">Pegunungan yang indah dengan pemandangan spektakuler.</p>
+                    <a href="https://example.com/nature" target="_blank" class="action-btn inline-block px-6 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700">
+                        Jelajahi Alam
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="gallery-item bg-white rounded-lg overflow-hidden">
+                <img src="https://res.cloudinary.com/bglgirl/image/upload/v1750858723/pexels-tizzy-20306805_pzfqkk.jpg" 
+                     alt="City 1" class="gallery-img">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Kota Metropolitan</h3>
+                    <p class="text-gray-600 mb-4">Kehidupan urban dengan gedung pencakar langit.</p>
+                    <a href="https://example.com/city" target="_blank" class="action-btn inline-block px-6 py-2 bg-green-600 text-white rounded-md font-medium hover:bg-green-700">
+                        Lihat Kota
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item bg-white rounded-lg overflow-hidden">
+                <img src="https://res.cloudinary.com/bglgirl/image/upload/v1750858723/pexels-fabiano-rodrigues-794857-1662298_kyoqqo.jpg" 
+                     alt="Tech 1" class="gallery-img">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Perangkat Teknologi</h3>
+                    <p class="text-gray-600 mb-4">Perangkat terbaru dengan desain futuristik.</p>
+                    <a href="https://example.com/tech" target="_blank" class="action-btn inline-block px-6 py-2 bg-purple-600 text-white rounded-md font-medium hover:bg-purple-700">
+                        Belajar Teknologi
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item bg-white rounded-lg overflow-hidden">
+                <img src="https://res.cloudinary.com/bglgirl/image/upload/v1750858721/pexels-christian-heitz-285904-842711_rgg9hf.jpg" 
+                     alt="Food 1" class="gallery-img">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Makanan Gourmet</h3>
+                    <p class="text-gray-600 mb-4">Hidangan lezat dari chef berpengalaman.</p>
+                    <a href="https://example.com/food" target="_blank" class="action-btn inline-block px-6 py-2 bg-red-600 text-white rounded-md font-medium hover:bg-red-700">
+                        Cari Resep
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 5 -->
+            <div class="gallery-item bg-white rounded-lg overflow-hidden">
+                <img src="https://res.cloudinary.com/bglgirl/image/upload/v1750858721/pexels-pixabay-259280_rqi62o.jpg" 
+                     alt="Travel 1" class="gallery-img">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Pantai Eksotis</h3>
+                    <p class="text-gray-600 mb-4">Pesona pantai dengan pasir putih dan air biru.</p>
+                    <a href="https://example.com/travel" target="_blank" class="action-btn inline-block px-6 py-2 bg-yellow-600 text-white rounded-md font-medium hover:bg-yellow-700">
+                        Booking Wisata
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 6 -->
+            <div class="gallery-item bg-white rounded-lg overflow-hidden">
+                <img src="https://res.cloudinary.com/bglgirl/image/upload/v1750858719/pexels-iriser-1366957_xvdmmm.jpg" 
+                     alt="Art 1" class="gallery-img">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Seni Lukisan</h3>
+                    <p class="text-gray-600 mb-4">Karya seni yang penuh makna dan estetika.</p>
+                    <a href="https://example.com/art" target="_blank" class="action-btn inline-block px-6 py-2 bg-pink-600 text-white rounded-md font-medium hover:bg-pink-700">
+                        Kunjungi Galeri
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">© 2023 TutorFlow ID. All rights reserved.</p>
+            <p class="text-gray-400">Dalam Tahap Pengembangan Admin</p>
+        </div>
+    </footer>
+
+    <script>
+        // Jika ingin menambahkan fungsi JavaScript
+        document.querySelectorAll('.action-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                console.log('Tombol diklik:', this.href);
+                // Anda bisa menambahkan tracking atau logika lain di sini
+            });
+        });
+    </script>
+</body>
+</html>
